@@ -12,11 +12,32 @@ def main():
     ]
 
     # Q1. 全国の平均気温を計算してください(9.5となればOK)
-    
-    print()
+    total_temperature = 0
+    for item in weather_information:
+        total_temperature += item["temperature"]
+
+    count = len(weather_information)
+    avg_temperature = total_temperature / count
+    print(avg_temperature)
+
     # Q2. 大阪府のすべての駅名をカンマ区切りで出力してください( '梅田,大阪,堺' となればOK)
+    osaka_stations = []
+    for item in weather_information:
+        if item["prefecture"] == "大阪府":
+            osaka_stations.append(item["station"])
+
+    print(", ".join(osaka_stations))
 
     # Q3. 福岡県の平均気温を計算してください(14.0となればOK)
+    fukuoka_temperatures = []
+    for item in weather_information:
+        if item["prefecture"] == "福岡県":
+            fukuoka_temperatures.append(item["temperature"])
+
+    count = len(fukuoka_temperatures)
+    sum_temperature = sum(fukuoka_temperatures)
+    avg_fukuoka = sum_temperature / count
+    print(avg_fukuoka)
 
 
 if __name__ == "__main__":
