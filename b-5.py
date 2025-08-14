@@ -42,7 +42,6 @@ numbers = []
 for item in data.split():
     numbers.append(int(item))
 
-
 print(f"合計値: {total_num()}")
 print(f"最大値: {max_num()}")
 print(f"最小値: {min_num()}")
