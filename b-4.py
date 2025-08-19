@@ -1,5 +1,4 @@
 def main():
-    # 3都府県のいくつかの駅名とある日の最高気温(単位: ℃)のデータを辞書として持っています
     weather_information = [
         {"prefecture": "東京都", "station": "渋谷", "temperature": 6.5},
         {"prefecture": "東京都", "station": "池袋", "temperature": 7.0},
@@ -11,7 +10,6 @@ def main():
         {"prefecture": "福岡県", "station": "太宰府", "temperature": 15.0},
     ]
 
-    # Q1. 全国の平均気温を計算してください(9.5となればOK)
     total_temperature = 0
     for item in weather_information:
         total_temperature += item["temperature"]
@@ -20,7 +18,6 @@ def main():
     avg_temperature = total_temperature / count
     print(avg_temperature)
 
-    # Q2. 大阪府のすべての駅名をカンマ区切りで出力してください( '梅田,大阪,堺' となればOK)
     osaka_stations = []
     for item in weather_information:
         if item["prefecture"] == "大阪府":
@@ -28,7 +25,7 @@ def main():
 
     print(", ".join(osaka_stations))
 
-    # Q3. 福岡県の平均気温を計算してください(14.0となればOK)
+
     fukuoka_temperatures = []
     for item in weather_information:
         if item["prefecture"] == "福岡県":
