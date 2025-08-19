@@ -1,10 +1,10 @@
-dan = 9
-retu = 9
+dan = int(input("行数を入力してください: "))
+retu = int(input("列数を入力してください: "))
 
-for dan in range(1, dan + 1):
+for d in range(1, dan + 1):
     for i in range(1, retu + 1):
-        product = dan * i
-        calc = f"{dan} X {i} = {product:2}"
-
+        product = i * d
+        calc = f"{i} X {d} = {product:2}"
         print(calc, end=" | ")
     print()
+

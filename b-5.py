@@ -25,11 +25,7 @@ def min_num():
 
 # 平均値
 def avg_num():
-    total = 0
-    for i in numbers:
-        total += i
-    avg_value = total // len(numbers)
-    return avg_value
+    return total_num() // len(numbers)
 
 
 data = input("データを入力してください（スペース区切り）：")
