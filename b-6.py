@@ -8,5 +8,4 @@ for i in range(roll_times):
     dice_roll = random.randint(1, dice_faces)
     results.append(dice_roll)
 
-
 print(results)
