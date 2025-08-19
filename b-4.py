@@ -25,7 +25,6 @@ def main():
 
     print(", ".join(osaka_stations))
 
-
     fukuoka_temperatures = []
     for item in weather_information:
         if item["prefecture"] == "福岡県":

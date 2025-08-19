@@ -1,7 +1,3 @@
-# 合計値
-from unittest import result
-
-
 def total_num():
     total = 0
     for i in numbers:
@@ -31,9 +27,8 @@ def min_num():
 def avg_num():
     total = 0
     for i in numbers:
-        result = total + i
-
-    avg_value = result // len(numbers)
+        total += i
+    avg_value = total // len(numbers)
     return avg_value
 
 
