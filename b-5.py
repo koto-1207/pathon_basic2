@@ -1,7 +1,3 @@
-# 合計値
-from unittest import result
-
-
 def total_num():
     total = 0
     for i in numbers:
@@ -29,19 +25,13 @@ def min_num():
 
 # 平均値
 def avg_num():
-    total = 0
-    for i in numbers:
-        result = total + i
-
-    avg_value = result // len(numbers)
-    return avg_value
+    return total_num() // len(numbers)
 
 
 data = input("データを入力してください（スペース区切り）：")
 numbers = []
 for item in data.split():
     numbers.append(int(item))
-
 
 print(f"合計値: {total_num()}")
 print(f"最大値: {max_num()}")
